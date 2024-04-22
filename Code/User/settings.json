@@ -1,0 +1,127 @@
+{
+  // Disable update because it's rule over package manager
+  "update.mode": "none",
+
+  // Disable telemetry
+  "telemetry.telemetryLevel": "off",
+
+  // Disable telemetry for Red Hat extensions
+  "redhat.telemetry.enabled": false,
+
+  // Window menu bar visibility (Windows and Linux only)
+  "window.menuBarVisibility": "hidden",
+
+  // Window title bar style
+  "window.titleBarStyle": "custom",
+
+  // Workbench color theme
+  "workbench.colorTheme": "Monokai Vibrant",
+
+  // Workbench icon theme
+  "workbench.iconTheme": "material-icon-theme",
+
+  // Editor
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorStyle": "line",
+  "editor.cursorWidth": 1,
+  "editor.fastScrollSensitivity": 10,
+  "editor.fontFamily": "'JetBrainsMono Nerd Font Mono'",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 12,
+  "editor.fontWeight": "400",
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.letterSpacing": 0.0,
+  "editor.lineHeight": 1.8,
+  "editor.linkedEditing": true,
+  "editor.minimap.enabled": true,
+  "editor.minimap.maxColumn": 88,
+  "editor.padding.bottom": 0,
+  "editor.padding.top": 0,
+  "editor.quickSuggestionsDelay": 0,
+  "editor.renderLineHighlight": "none",
+  "editor.rulers": [88],
+  "editor.smoothScrolling": true,
+  "editor.suggestSelection": "first",
+  "editor.tabCompletion": "on",
+  "editor.trimAutoWhitespace": true,
+
+  // Editor brackets
+  "editor.bracketPairColorization.enabled": false,
+  "editor.guides.bracketPairs": false,
+  "editor.guides.indentation": false,
+
+  // Editor unicode highlight
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "editor.unicodeHighlight.invisibleCharacters": true,
+  "editor.unicodeHighlight.nonBasicASCII": false,
+
+  // Files options
+  "files.encoding": "utf8",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+
+  // Explorer options
+  "explorer.confirmDragAndDrop": false,
+
+  // Python
+  // (https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+  // (https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff)
+  "python.testing.pytestEnabled": true,
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": "explicit",
+      "source.organizeImports.ruff": "always"
+    }
+  },
+
+  // Go (https://marketplace.visualstudio.com/items?itemName=golang.Go)
+  "go.lintTool": "revive",
+  "go.formatTool": "gofumpt",
+
+  // Clang format (https://marketplace.visualstudio.com/items?itemName=xaver.clang-format)
+  "clang-format.style": "{ IndentWidth: 4, BasedOnStyle: google, AlignConsecutiveAssignments: true }",
+
+  // Hadolint (https://marketplace.visualstudio.com/items?itemName=exiasr.hadolint)
+  "hadolint.hadolintPath": "hadolint",
+  "hadolint.cliOptions": ["--no-color", "--ignore", "DL3000"],
+  "hadolint.maxNumberOfProblems": 100,
+  "hadolint.outputLevel": "warning",
+
+  // Linter (https://marketplace.visualstudio.com/items?itemName=fnando.linter)
+  "linter.linters": {
+    "yamllint": {
+      "languages": ["yaml", "dockercompose"]
+    }
+  },
+
+  // Formatters
+  "[dockercompose]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "[proto3]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
