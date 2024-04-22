@@ -1,0 +1,63 @@
+live_config_reload = true
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+decorations = "full"
+dynamic_title = true
+startup_mode = "Maximized"
+title = "Alacritty"
+
+[scrolling]
+history = 10000
+
+[cursor.style]
+blinking = "On"
+shape = "Beam"
+
+# Font
+[font]
+size = 12.0
+
+[font.bold]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Bold Italic"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Italic"
+
+[font.normal]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Regular"
+
+# Theme
+[colors.bright]
+black = "#686868"
+blue = "#3BE5FF"
+cyan = "#FFA826"
+green = "#89E215"
+magenta = "#A567F1"
+red = "#FA236E"
+white = "#FFF9D5"
+yellow = "#EECE3F"
+
+[colors.normal]
+black = "#212733"
+blue = "#3BE5FF"
+cyan = "#FFA826"
+green = "#89E215"
+magenta = "#A567F1"
+red = "#FA236E"
+white = "#E0DBB7"
+yellow = "#EECE3F"
+
+[colors.primary]
+background = "#000000"
+bright_foreground = "#f28779"
+foreground = "#cbccc6"
