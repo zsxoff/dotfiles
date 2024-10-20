@@ -1,5 +1,14 @@
 #!/bin/sh
 
+# Linux - Fonts
+ln -s ${PWD}/.fonts.conf ${HOME}/.fonts.conf
+
+# Linux - Xresources
+ln -s ${PWD}/.Xresources ${HOME}/.Xresources
+
+# Linux - xsettingsd
+ln -s ${PWD}/.xsettingsd ${HOME}/.xsettingsd
+
 # Alacritty
 mkdir -p ${HOME}/.config/alacritty/
 ln -s ${PWD}/alacritty/alacritty.toml ${HOME}/.config/alacritty/alacritty.toml
