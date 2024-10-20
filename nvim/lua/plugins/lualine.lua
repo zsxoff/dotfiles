@@ -2,11 +2,11 @@
 
 return {
     "nvim-lualine/lualine.nvim",
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    dependencies = { "nvim-tree/nvim-web-devicons" },
     event = "ColorScheme",
     opts = function()
         return {
-            theme = 'rose-pine'
+            theme = "rose-pine",
         }
-    end
+    end,
 }
