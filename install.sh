@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# ZSH
+ln -s ${PWD}/.zshrc ${HOME}/.zshrc
+
 # Linux - Fonts
 ln -s ${PWD}/.fonts.conf ${HOME}/.fonts.conf
 
