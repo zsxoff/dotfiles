@@ -1,5 +1,11 @@
 # > macOS:
-# > brew install eza fd font-symbols-only-nerd-font fzf jq ripgrep starship yq zoxide
+# > brew install direnv eza fd font-symbols-only-nerd-font fzf jq navi ripgrep starship yq zoxide
+
+# > Arch Linux:
+# > sudo pacman -S --needed direnv eza fd ttf-nerd-fonts-symbols{,-common,-mono} fzf jq navi ripgrep starship yq zoxide
+
+# > Customize Starship via preset:
+# > starship preset plain-text-symbols -o ~/.config/starship.toml
 
 # ----------------------------------------------------------------------------------------------------------------------
 # ZSH
@@ -16,15 +22,25 @@ zstyle ':omz:update' mode reminder
 # Uncomment the following line to change how often to auto-update (in days).
 zstyle ':omz:update' frequency 30
 
+# You may need to manually set your language environment
+export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
+
 plugins=(
-    autoupdate
     battery
     direnv
     git
     gitfast
-    you-should-use
-    zsh-autosuggestions
-    zsh-syntax-highlighting
+    autoupdate              # https://github.com/tamcore/autoupdate-oh-my-zsh-plugins
+    you-should-use          # https://github.com/MichaelAquilina/zsh-you-should-use
+    zsh-autosuggestions     # https://github.com/zsh-users/zsh-autosuggestions
+    zsh-syntax-highlighting # https://github.com/zsh-users/zsh-syntax-highlighting
 )
 
 autoload -U compinit && compinit
@@ -44,6 +60,12 @@ export PATH="${HOME}/go/bin:$PATH"
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # ----------------------------------------------------------------------------------------------------------------------
+# Sources
+
+source <(fzf --zsh)
+source <(kubectl completion zsh)
+
+# ----------------------------------------------------------------------------------------------------------------------
 # Aliases
 
 alias la="eza -la --icons -s type"
@@ -61,9 +83,6 @@ alias vim="nvim"
 export FZF_DEFAULT_COMMAND="fd --type file --follow --hidden --exclude .git --color=always"
 export FZF_DEFAULT_OPTS="--ansi"
 
-source <(fzf --zsh)
-source <(kubectl completion zsh)
-
-eval "$(starship init zsh)"
 eval "$(navi widget zsh)"
 eval "$(zoxide init zsh)"
+eval "$(starship init zsh)"
