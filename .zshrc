@@ -76,6 +76,8 @@ alias kubectl="kubecolor"
 alias k="kubectl"
 alias kc="kubeconform"
 alias vim="nvim"
+alias sa="source ./.venv/bin/activate"
+alias sd="deactivate"
 
 # ----------------------------------------------------------------------------------------------------------------------
 # Tools
