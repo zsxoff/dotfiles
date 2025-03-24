@@ -15,13 +15,22 @@
   "window.titleBarStyle": "custom",
 
   // Workbench color theme
-  "workbench.colorTheme": "Monokai Pirokai - Beach Sunset",
+  "workbench.colorTheme": "Kanagawa Black",
 
   // Workbench icon theme
   "workbench.iconTheme": "symbols",
 
+  // Git Blame
+  "git.blame.editorDecoration.enabled": true,
+  "git.blame.statusBarItem.enabled": true,
+
+  // Continue
+  "continue.telemetryEnabled": false,
+  "continue.enableTabAutocomplete": false,
+
   // Editor
-  "editor.cursorBlinking": "smooth",
+  "editor.cursorBlinking": "expand",
+  "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorStyle": "line",
   "editor.cursorWidth": 1,
   "editor.fastScrollSensitivity": 10,
@@ -29,16 +38,18 @@
   "editor.fontFamily": "'JetBrainsMono Nerd Font Mono'",
   "editor.fontLigatures": true,
   "editor.fontSize": 12,
-  "editor.fontWeight": "400",
+  "editor.fontWeight": "700",
   "editor.formatOnPaste": false,
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
-  "editor.letterSpacing": 0.0,
-  "editor.lineHeight": 1.8,
+  "editor.letterSpacing": 0.1,
+  "editor.lightbulb.enabled": "off",
+  "editor.lineHeight": 1.5,
   "editor.lineNumbers": "on",
   "editor.linkedEditing": true,
   "editor.minimap.enabled": true,
   "editor.minimap.maxColumn": 88,
+  "editor.minimap.showSlider": "always",
   "editor.padding.bottom": 0,
   "editor.padding.top": 0,
   "editor.quickSuggestionsDelay": 0,
@@ -50,7 +61,8 @@
   "editor.trimAutoWhitespace": true,
 
   // Editor brackets
-  "editor.bracketPairColorization.enabled": false,
+  "editor.autoClosingBrackets": "languageDefined",
+  "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": false,
   "editor.guides.indentation": false,
   "editor.matchBrackets": "never",
@@ -125,9 +137,9 @@
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
   "[proto3]": {
-    "editor.defaultFormatter": "xaver.clang-format"
+    "editor.defaultFormatter": "bufbuild.vscode-buf"
   },
   "[yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "redhat.vscode-yaml"
   }
 }
