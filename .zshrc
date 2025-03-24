@@ -1,8 +1,8 @@
 # > macOS:
-# > brew install direnv eza fd font-symbols-only-nerd-font fzf jq navi ripgrep starship yq zoxide
+# > brew install direnv eza fd font-symbols-only-nerd-font fzf jq ripgrep starship yq zoxide
 
 # > Arch Linux:
-# > sudo pacman -S --needed direnv eza fd ttf-nerd-fonts-symbols{,-common,-mono} fzf jq navi ripgrep starship yq zoxide
+# > sudo pacman -S --needed direnv eza fd ttf-nerd-fonts-symbols{,-common,-mono} fzf jq ripgrep starship yq zoxide
 
 # > Customize Starship via preset:
 # > starship preset plain-text-symbols -o ~/.config/starship.toml
@@ -85,6 +85,5 @@ alias sd="deactivate"
 export FZF_DEFAULT_COMMAND="fd --type file --follow --hidden --exclude .git --color=always"
 export FZF_DEFAULT_OPTS="--ansi"
 
-eval "$(navi widget zsh)"
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
