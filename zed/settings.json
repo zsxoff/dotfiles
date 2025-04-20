@@ -68,6 +68,17 @@
   "ui_font_size": 12,
   "wrap_guides": [120],
 
+  // Appearance for diagnostics
+  "diagnostics": {
+    "inline": {
+      "enabled": true,
+      "update_debounce_ms": 1,
+      "padding": 4,
+      "min_column": 0,
+      "max_severity": null
+    }
+  },
+
   // File scan exclusions
   "file_scan_exclusions": [
     "**/*_cache",
@@ -136,7 +147,7 @@
           "typeCheckingMode": "strict"
         },
         "python": {
-          "pythonPath": "./.venv/bin/python"
+          "pythonPath": ".venv/bin/python"
         }
       }
     }
