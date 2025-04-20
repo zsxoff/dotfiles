@@ -2,10 +2,18 @@
   // Disable auto update for OS package manager
   "auto_update": false,
 
-  // Telemetry
+  // Disable online projects
+  "projects_online_by_default": false,
+
+  // Disable telemetry
   "telemetry": {
     "diagnostics": false,
     "metrics": false
+  },
+
+  // Disable Copilot
+  "features": {
+    "copilot": false
   },
 
   // AI assistant
@@ -41,16 +49,20 @@
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_size": 13.0,
   "buffer_font_weight": 400,
-  "buffer_line_height": "standard",
+  "buffer_line_height": { "custom": 1.4 },
   "current_line_highlight": "none",
+  "ensure_final_newline_on_save": true,
+  "format_on_save": "on",
   "icon_theme": "Material Icon Theme",
   "indent_guides": { "enabled": true, "coloring": "indent_aware" },
   "inlay_hints": { "enabled": true },
   "preferred_line_length": 120,
   "project_panel": { "indent_size": 16 },
+  "remove_trailing_whitespace_on_save": true,
   "soft_wrap": "editor_width",
   "tab_bar": { "show": true, "show_nav_history_buttons": false },
   "tabs": { "git_status": true, "file_icons": true, "show_close_button": "hover" },
+  "terminal": { "line_height": { "custom": 1.4 } },
   "theme": "Kanagawa Wave - No Italics",
   "ui_font_family": "Arimo",
   "ui_font_size": 12,
@@ -78,6 +90,7 @@
     "Python": {
       "language_servers": ["pyright", "ruff"],
       "format_on_save": "on",
+      "remove_trailing_whitespace_on_save": true,
       "tasks": {
         "variables": {
           "TEST_RUNNER": "pytest" // https://github.com/zed-industries/zed/pull/18824
