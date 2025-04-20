@@ -150,6 +150,11 @@
           "pythonPath": ".venv/bin/python"
         }
       }
+    },
+    "taplo": {
+      "settings": {
+        "array_auto_collapse": false
+      }
     }
   }
 }
