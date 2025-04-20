@@ -1,0 +1,131 @@
+{
+  // Disable auto update for OS package manager
+  "auto_update": false,
+
+  // Telemetry
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+
+  // AI assistant
+  "assistant": {
+    "default_model": {
+      "provider": "ollama",
+      "model": "deepseek-r1:8b"
+    },
+    "inline_assistant_model": {
+      "provider": "ollama",
+      "model": "gemma3:4b"
+    },
+    "commit_message_model": {
+      "provider": "ollama",
+      "model": "gemma3:4b"
+    },
+    "version": "2"
+  },
+  "show_edit_predictions": true,
+
+  // Extensions
+  "auto_install_extensions": {
+    "docker-compose": true,
+    "dockerfile": true,
+    "make": true,
+    "ruff": true,
+    "toml": true,
+    "zed-kanagawa": true
+  },
+
+  // Appearance
+  "allow_rewrap": "anywhere", // Ctrl+K+Q
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_size": 13.0,
+  "buffer_font_weight": 400,
+  "buffer_line_height": "standard",
+  "current_line_highlight": "none",
+  "icon_theme": "Material Icon Theme",
+  "indent_guides": { "enabled": true, "coloring": "indent_aware" },
+  "inlay_hints": { "enabled": true },
+  "preferred_line_length": 120,
+  "project_panel": { "indent_size": 16 },
+  "soft_wrap": "editor_width",
+  "tab_bar": { "show": true, "show_nav_history_buttons": false },
+  "tabs": { "git_status": true, "file_icons": true, "show_close_button": "hover" },
+  "theme": "Kanagawa Wave - No Italics",
+  "ui_font_family": "Arimo",
+  "ui_font_size": 12,
+  "wrap_guides": [120],
+
+  // File scan exclusions
+  "file_scan_exclusions": [
+    "**/*_cache",
+    "**/.*-version",
+    "**/.DS_Store",
+    "**/.git",
+    "**/.mypy_cache",
+    "**/.rope*",
+    "**/.ruff_cache",
+    "**/.venv",
+    "**/__pycache__",
+    "**/build",
+    "**/dist",
+    "**/node_modules",
+    "**/target"
+  ],
+
+  // Languages
+  "languages": {
+    "Python": {
+      "language_servers": ["pyright", "ruff"],
+      "format_on_save": "on",
+      "tasks": {
+        "variables": {
+          "TEST_RUNNER": "pytest" // https://github.com/zed-industries/zed/pull/18824
+        }
+      },
+      "formatter": [
+        {
+          "language_server": {
+            "name": "ruff"
+          }
+        },
+        {
+          "code_actions": {
+            "source.organizeImports.ruff": true,
+            "source.fixAll.ruff": true
+          }
+        }
+      ]
+    }
+  },
+
+  // LSP
+  "lsp": {
+    "ruff": {
+      "initialization_options": {
+        "settings": {
+          "lineLength": 120,
+          "lint": {
+            "extendSelect": [
+              "D401", // First line of docstring should be in imperative mood: "{first_line}"
+              "D404", // First word of the docstring should not be "This"
+              "DTZ", // flake8-datetimez (DTZ)
+              "I" // isort
+            ]
+          }
+        }
+      }
+    },
+    "pyright": {
+      "settings": {
+        "python.analysis": {
+          "diagnosticMode": "workspace",
+          "typeCheckingMode": "strict"
+        },
+        "python": {
+          "pythonPath": "./.venv/bin/python"
+        }
+      }
+    }
+  }
+}

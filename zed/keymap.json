@@ -1,0 +1,59 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "shift shift": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Editor && mode == full",
+    "bindings": {
+      "ctrl-r d": [
+        "assistant::InlineAssist",
+        {
+          "prompt": "Напиши docstring для этой функции. Пиши на английском языке. Пиши кратко. Не пиши тип аргументов. Используй стиль Google Python Style Guide. Пиши блок `Example` для простых функций."
+        }
+      ]
+    }
+  },
+  {
+    "context": "Editor && mode == full",
+    "bindings": {
+      "ctrl-r f": [
+        "assistant::InlineAssist",
+        {
+          "prompt": "Найди ошибку в этом коде."
+        }
+      ]
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-r t": [
+        "task::Spawn",
+        {
+          "task_name": "pytest"
+        }
+      ]
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-r m": [
+        "task::Spawn",
+        {
+          "task_name": "mypy"
+        }
+      ]
+    }
+  }
+]

@@ -24,6 +24,9 @@ ln -s ${PWD}/kitty/current-theme.conf ${HOME}/.config/kitty/current-theme.conf
 # Neovim
 ln -s ${PWD}/nvim ${HOME}/.config/nvim
 
+# Zed
+ln -s ${PWD}/nvim ${HOME}/.config/zed
+
 # Visual Studio Code
 if [[ $OSTYPE == 'darwin'* ]]; then
     mkdir -p ${HOME}/Library/Application Support/Code/User/
