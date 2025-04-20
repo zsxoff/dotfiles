@@ -25,7 +25,7 @@ ln -s ${PWD}/kitty/current-theme.conf ${HOME}/.config/kitty/current-theme.conf
 ln -s ${PWD}/nvim ${HOME}/.config/nvim
 
 # Zed
-ln -s ${PWD}/nvim ${HOME}/.config/zed
+ln -s ${PWD}/zed ${HOME}/.config/zed
 
 # Visual Studio Code
 if [[ $OSTYPE == 'darwin'* ]]; then
