@@ -12,7 +12,16 @@
   {
     "context": "Workspace",
     "bindings": {
-      "shift shift": "file_finder::Toggle"
+      "shift shift": "file_finder::Toggle",
+      "ctrl-r t": ["task::Spawn", { "task_name": "pytest" }],
+      "ctrl-r m": ["task::Spawn", { "task_name": "mypy" }]
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-ctrl-[": "editor::AddSelectionAbove",
+      "cmd-ctrl-]": "editor::AddSelectionBelow"
     }
   },
   {
@@ -23,47 +32,13 @@
         {
           "prompt": "Напиши docstring для этой функции. Пиши на английском языке. Пиши кратко. Не пиши тип аргументов. Используй стиль Google Python Style Guide. Пиши блок `Example` для простых функций."
         }
-      ]
-    }
-  },
-  {
-    "context": "Editor && mode == full",
-    "bindings": {
+      ],
       "ctrl-r f": [
         "assistant::InlineAssist",
         {
           "prompt": "Найди ошибку в этом коде."
         }
       ]
-    }
-  },
-  {
-    "context": "Workspace",
-    "bindings": {
-      "ctrl-r t": [
-        "task::Spawn",
-        {
-          "task_name": "pytest"
-        }
-      ]
-    }
-  },
-  {
-    "context": "Workspace",
-    "bindings": {
-      "ctrl-r m": [
-        "task::Spawn",
-        {
-          "task_name": "mypy"
-        }
-      ]
-    }
-  },
-  {
-    "context": "Editor",
-    "bindings": {
-      "cmd-ctrl-[": "editor::AddSelectionAbove",
-      "cmd-ctrl-]": "editor::AddSelectionBelow"
     }
   }
 ]
