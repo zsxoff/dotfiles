@@ -1,7 +1,10 @@
 // Zed keymap
 //
 // For information on binding keys, see the Zed
-// documentation: https://zed.dev/docs/key-bindings
+// documentation:
+// - https://zed.dev/docs/key-bindings
+// or src:
+// - https://zed.dev/ref/default.json
 //
 // To see the default key bindings run `zed: open default keymap`
 // from the command palette.
@@ -54,6 +57,13 @@
           "task_name": "mypy"
         }
       ]
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-ctrl-[": "editor::AddSelectionAbove",
+      "cmd-ctrl-]": "editor::AddSelectionBelow"
     }
   }
 ]
