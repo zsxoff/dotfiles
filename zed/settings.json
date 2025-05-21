@@ -17,10 +17,10 @@
   },
 
   // AI assistant
-  "assistant": {
+  "agent": {
     "default_model": {
       "provider": "ollama",
-      "model": "deepseek-r1:8b"
+      "model": "qwen2.5-coder:7b"
     },
     "inline_assistant_model": {
       "provider": "ollama",
@@ -49,23 +49,50 @@
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_size": 13.0,
   "buffer_font_weight": 400,
-  "buffer_line_height": { "custom": 1.4 },
+  "buffer_line_height": {
+    "custom": 1.5
+  },
   "current_line_highlight": "none",
   "ensure_final_newline_on_save": true,
   "format_on_save": "on",
   "icon_theme": "Material Icon Theme",
-  "indent_guides": { "enabled": true, "coloring": "indent_aware" },
-  "inlay_hints": { "enabled": true },
+  "indent_guides": {
+    "enabled": true,
+    "coloring": "indent_aware"
+  },
+  "inlay_hints": {
+    "enabled": true
+  },
   "preferred_line_length": 120,
-  "project_panel": { "indent_size": 16 },
+  "project_panel": {
+    "indent_size": 16
+  },
   "remove_trailing_whitespace_on_save": true,
   "soft_wrap": "editor_width",
-  "tab_bar": { "show": true, "show_nav_history_buttons": false },
-  "tabs": { "git_status": true, "file_icons": true, "show_close_button": "hover" },
-  "terminal": { "line_height": { "custom": 1.4 } },
-  "theme": "Kanagawa Wave - No Italics",
+  "tab_bar": {
+    "show": true,
+    "show_nav_history_buttons": false
+  },
+  "tabs": {
+    "git_status": true,
+    "file_icons": true,
+    "show_close_button": "hover"
+  },
+  "terminal": {
+    "line_height": {
+      "custom": 1.5
+    }
+  },
+  "title_bar": {
+    "show_branch_name": true,
+    "show_branch_icon": true
+  },
+  "minimap": {
+    "show": "always"
+  },
+  "theme": "Fleet Dark",
   "ui_font_family": "Arimo",
-  "ui_font_size": 12,
+  "ui_font_size": 13,
   "wrap_guides": [120],
 
   // Appearance for diagnostics
@@ -131,10 +158,10 @@
           "lineLength": 120,
           "lint": {
             "extendSelect": [
-              "D401", // First line of docstring should be in imperative mood: "{first_line}"
+              "D401", // First line of docstring should be in imperative mood
               "D404", // First word of the docstring should not be "This"
-              "DTZ", // flake8-datetimez (DTZ)
-              "I" // isort
+              "DTZ",
+              "I"
             ]
           }
         }
@@ -147,7 +174,7 @@
           "typeCheckingMode": "strict"
         },
         "python": {
-          "pythonPath": ".venv/bin/python"
+          "pythonPath": "./.venv/bin/python"
         }
       }
     },
