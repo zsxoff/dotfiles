@@ -78,6 +78,7 @@ alias kc="kubeconform"
 alias vim="nvim"
 alias sa="source ./.venv/bin/activate"
 alias sd="deactivate"
+alias zed="zeditor"
 
 # ----------------------------------------------------------------------------------------------------------------------
 # Tools
