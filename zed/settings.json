@@ -20,17 +20,16 @@
   "agent": {
     "default_model": {
       "provider": "ollama",
-      "model": "qwen2.5-coder:7b"
+      "model": "deepseek-r1:8b"
     },
     "inline_assistant_model": {
       "provider": "ollama",
-      "model": "gemma3:4b"
+      "model": "qwen2.5-coder:7b"
     },
     "commit_message_model": {
       "provider": "ollama",
-      "model": "gemma3:4b"
-    },
-    "version": "2"
+      "model": "qwen2.5-coder:14b"
+    }
   },
   "show_edit_predictions": true,
 
@@ -38,8 +37,10 @@
   "auto_install_extensions": {
     "docker-compose": true,
     "dockerfile": true,
+    "log": true,
     "make": true,
     "ruff": true,
+    "sql": true,
     "toml": true,
     "zed-kanagawa": true
   },
@@ -50,7 +51,7 @@
   "buffer_font_size": 13.0,
   "buffer_font_weight": 400,
   "buffer_line_height": {
-    "custom": 1.5
+    "custom": 1.6
   },
   "current_line_highlight": "none",
   "ensure_final_newline_on_save": true,
