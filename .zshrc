@@ -80,6 +80,10 @@ alias sa="source ./.venv/bin/activate"
 alias sd="deactivate"
 alias zed="zeditor"
 
+if [[ "$(uname -s)" == "Linux" ]]; then
+    alias zed="env -u WAYLAND_DISPLAY zeditor"
+fi
+
 # ----------------------------------------------------------------------------------------------------------------------
 # Tools
 
