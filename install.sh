@@ -3,14 +3,17 @@
 # ZSH
 ln -s ${PWD}/.zshrc ${HOME}/.zshrc
 
-# Linux - Fonts
-ln -s ${PWD}/.fonts.conf ${HOME}/.fonts.conf
+# Linux
+if [[ $OSTYPE == 'linux'* ]]; then
+    # Fonts
+    ln -s ${PWD}/.fonts.conf ${HOME}/.fonts.conf
 
-# Linux - Xresources
-ln -s ${PWD}/.Xresources ${HOME}/.Xresources
+    # Xresources
+    ln -s ${PWD}/.Xresources ${HOME}/.Xresources
 
-# Linux - xsettingsd
-ln -s ${PWD}/.xsettingsd ${HOME}/.xsettingsd
+    # xsettingsd
+    ln -s ${PWD}/.xsettingsd ${HOME}/.xsettingsd
+fi
 
 # Alacritty
 mkdir -p ${HOME}/.config/alacritty/
