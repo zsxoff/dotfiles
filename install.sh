@@ -13,8 +13,8 @@ ln -s ${PWD}/.Xresources ${HOME}/.Xresources
 ln -s ${PWD}/.xsettingsd ${HOME}/.xsettingsd
 
 # Alacritty
-# mkdir -p ${HOME}/.config/alacritty/
-# ln -s ${PWD}/alacritty/alacritty.toml ${HOME}/.config/alacritty/alacritty.toml
+mkdir -p ${HOME}/.config/alacritty/
+ln -s ${PWD}/alacritty/alacritty.toml ${HOME}/.config/alacritty/alacritty.toml
 
 # Kitty
 mkdir -p ${HOME}/.config/kitty/
