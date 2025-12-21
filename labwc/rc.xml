@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<labwc_config>
+  <theme>
+    <name />
+    <cornerRadius>8</cornerRadius>
+    <font name="Arimo" size="10" />
+  </theme>
+  <keyboard>
+    <default />
+
+    <!-- Keyboard layout -->
+    <layoutScope>global</layoutScope>
+    <numlock>on</numlock>
+    <repeatDelay>250</repeatDelay>
+    <repeatRate>40</repeatRate>
+
+    <!-- Execute programs -->
+    <keybind key="A-r">
+      <action name="Execute" command="labwc -r" />
+    </keybind>
+    <keybind key="A-Return">
+      <action name="Execute" command="foot" />
+    </keybind>
+    <keybind key="A-Space">
+      <action name="Execute" command="rofi -show drun" />
+    </keybind>
+    <keybind key="A-S-q">
+      <action name="Execute"
+        command="swaylock --color=000000 --daemonize --font-size=16 --font=Arimo --ignore-empty-password --show-failed-attempts --show-keyboard-layout"
+      />
+    </keybind>
+    <keybind key="Print">
+      <action name="Execute" command="grimshot copy area" />
+    </keybind>
+
+    <!-- Manage windows -->
+    <keybind key="A-q">
+      <action name="Close" />
+    </keybind>
+    <keybind key="A-f">
+      <action name="ToggleMaximize" />
+    </keybind>
+    <keybind key="A-h">
+      <action name="SnapToEdge" direction="left" combine="yes" />
+    </keybind>
+    <keybind key="A-l">
+      <action name="SnapToEdge" direction="right" combine="yes" />
+    </keybind>
+    <keybind key="A-k">
+      <action name="SnapToEdge" direction="up" combine="yes" />
+    </keybind>
+    <keybind key="A-j">
+      <action name="SnapToEdge" direction="down" combine="yes" />
+    </keybind>
+
+    <!-- Volume -->
+    <keybind key="XF86_AudioLowerVolume">
+      <action name="Execute" command="pactl set-sink-volume \@DEFAULT_SINK@ -5%" />
+    </keybind>
+    <keybind key="XF86_AudioRaiseVolume">
+      <action name="Execute" command="pactl set-sink-volume \@DEFAULT_SINK@ +5%" />
+    </keybind>
+    <keybind key="XF86_AudioMute">
+      <action name="Execute" command="pactl set-sink-mute \@DEFAULT_SINK@ toggle" />
+    </keybind>
+
+    <!-- GoToDesktop -->
+    <keybind key="A-Left">
+      <action name="GoToDesktop" to="left" wrap="yes" />
+    </keybind>
+    <keybind key="A-Right">
+      <action name="GoToDesktop" to="right" wrap="yes" />
+    </keybind>
+    <keybind key="A-1">
+      <action name="GoToDesktop" to="Workspace 1" wrap="yes" />
+    </keybind>
+    <keybind key="A-2">
+      <action name="GoToDesktop" to="Workspace 2" wrap="yes" />
+    </keybind>
+    <keybind key="A-3">
+      <action name="GoToDesktop" to="Workspace 3" wrap="yes" />
+    </keybind>
+    <keybind key="A-4">
+      <action name="GoToDesktop" to="Workspace 4" wrap="yes" />
+    </keybind>
+    <keybind key="A-5">
+      <action name="GoToDesktop" to="Workspace 5" wrap="yes" />
+    </keybind>
+    <keybind key="A-6">
+      <action name="GoToDesktop" to="Workspace 6" wrap="yes" />
+    </keybind>
+    <keybind key="A-7">
+      <action name="GoToDesktop" to="Workspace 7" wrap="yes" />
+    </keybind>
+    <keybind key="A-8">
+      <action name="GoToDesktop" to="Workspace 8" wrap="yes" />
+    </keybind>
+    <keybind key="A-9">
+      <action name="GoToDesktop" to="Workspace 9" wrap="yes" />
+    </keybind>
+    <keybind key="A-0">
+      <action name="GoToDesktop" to="Workspace 10" wrap="yes" />
+    </keybind>
+
+    <!-- SendToDesktop -->
+    <keybind key="A-S-Left">
+      <action name="SendToDesktop" to="left" wrap="yes" />
+    </keybind>
+    <keybind key="A-S-Right">
+      <action name="SendToDesktop" to="right" wrap="yes" />
+    </keybind>
+    <keybind key="A-S-1">
+      <action name="SendToDesktop" to="Workspace 1" wrap="yes" />
+    </keybind>
+    <keybind key="A-S-2">
+      <action name="SendToDesktop" to="Workspace 2" wrap="yes" />
+    </keybind>
+    <keybind key="A-S-3">
+      <action name="SendToDesktop" to="Workspace 3" wrap="yes" />
+    </keybind>
+    <keybind key="A-S-4">
+      <action name="SendToDesktop" to="Workspace 4" wrap="yes" />
+    </keybind>
+    <keybind key="A-S-5">
+      <action name="SendToDesktop" to="Workspace 5" wrap="yes" />
+    </keybind>
+    <keybind key="A-S-6">
+      <action name="SendToDesktop" to="Workspace 6" wrap="yes" />
+    </keybind>
+    <keybind key="A-S-7">
+      <action name="SendToDesktop" to="Workspace 7" wrap="yes" />
+    </keybind>
+    <keybind key="A-S-8">
+      <action name="SendToDesktop" to="Workspace 8" wrap="yes" />
+    </keybind>
+    <keybind key="A-S-9">
+      <action name="SendToDesktop" to="Workspace 9" wrap="yes" />
+    </keybind>
+    <keybind key="A-S-0">
+      <action name="SendToDesktop" to="Workspace 10" wrap="yes" />
+    </keybind>
+
+    <!-- Remove a previously defined keybind -->
+    <keybind key="W-Return">
+      <action name="None" />
+    </keybind>
+  </keyboard>
+
+  <mouse>
+    <default />
+    <!-- Show a custom menu on desktop right click -->
+    <context name="Root">
+      <mousebind button="Right" action="Press">
+        <action name="ShowMenu" menu="some-custom-menu" />
+      </mousebind>
+    </context>
+  </mouse>
+
+  <!-- Desktops -->
+  <desktops>
+    <popupTime>100</popupTime>
+    <names>
+      <name>Workspace 1</name>
+      <name>Workspace 2</name>
+      <name>Workspace 3</name>
+      <name>Workspace 4</name>
+      <name>Workspace 5</name>
+      <name>Workspace 6</name>
+      <name>Workspace 7</name>
+      <name>Workspace 8</name>
+      <name>Workspace 9</name>
+      <name>Workspace 10</name>
+    </names>
+  </desktops>
+</labwc_config>

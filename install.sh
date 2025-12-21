@@ -13,6 +13,9 @@ if [[ $OSTYPE == 'linux'* ]]; then
 
     # xsettingsd
     ln -s ${PWD}/.xsettingsd ${HOME}/.xsettingsd
+
+    # Labwc
+    ln -s ${PWD}/labwc ${HOME}/.config/labwc
 fi
 
 # Alacritty
