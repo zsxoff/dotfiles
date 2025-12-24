@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <labwc_config>
   <theme>
-    <name />
     <cornerRadius>8</cornerRadius>
     <font name="Arimo" size="10" />
   </theme>
