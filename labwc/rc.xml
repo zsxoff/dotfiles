@@ -18,7 +18,7 @@
       <action name="Execute" command="labwc -r" />
     </keybind>
     <keybind key="A-Return">
-      <action name="Execute" command="foot" />
+      <action name="Execute" command="kitty" />
     </keybind>
     <keybind key="A-Space">
       <action name="Execute" command="rofi -show drun" />
