@@ -1,3 +1,5 @@
+# shellcheck disable=all
+
 # > macOS:
 # > brew install direnv eza fd font-symbols-only-nerd-font fzf jq ripgrep starship yq zoxide
 
