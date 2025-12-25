@@ -4,9 +4,12 @@ return {
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     event = "ColorScheme",
-    opts = function()
-        return {
-            theme = "rose-pine",
-        }
+
+    config = function()
+        require("lualine").setup({
+            options = {
+                theme = "jellybeans",
+            },
+        })
     end,
 }

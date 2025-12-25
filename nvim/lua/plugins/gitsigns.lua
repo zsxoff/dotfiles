@@ -1,7 +1,9 @@
 -- Git integration for buffers.
+-- https://github.com/lewis6991/gitsigns.nvim
 
 return {
     "lewis6991/gitsigns.nvim",
+    version = "v1.0.2",
     opts = {
         signs = {
             add = { text = "┃" },
@@ -11,15 +13,6 @@ return {
             changedelete = { text = "~" },
             untracked = { text = "┆" },
         },
-        signs_staged = {
-            add = { text = "┃" },
-            change = { text = "┃" },
-            delete = { text = "_" },
-            topdelete = { text = "‾" },
-            changedelete = { text = "~" },
-            untracked = { text = "┆" },
-        },
-        signs_staged_enable = true,
         signcolumn = true, -- Toggle with `:Gitsigns toggle_signs`
         numhl = false, -- Toggle with `:Gitsigns toggle_numhl`
         linehl = false, -- Toggle with `:Gitsigns toggle_linehl`

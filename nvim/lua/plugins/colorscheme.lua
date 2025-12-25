@@ -1,9 +1,9 @@
 return {
-    "bluz71/vim-moonfly-colors",
-    name = "moonfly",
+    "EdenEast/nightfox.nvim",
     lazy = false,
     priority = 1000,
     config = function()
-        vim.cmd("colorscheme moonfly")
+        vim.opt.termguicolors = true
+        vim.cmd("colorscheme carbonfox")
     end,
 }

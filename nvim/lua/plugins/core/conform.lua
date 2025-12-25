@@ -1,5 +1,9 @@
+-- Lightweight yet powerful formatter plugin for Neovim.
+-- https://github.com/stevearc/conform.nvim
+
 return {
     "stevearc/conform.nvim",
+    version = "v9.1.0",
     event = { "BufWritePre" },
     cmd = { "ConformInfo" },
     keys = {
@@ -16,17 +20,39 @@ return {
     opts = {
         -- Define your formatters
         formatters_by_ft = {
-            lua = { "stylua" },
-            rust = { "rustfmt", lsp_format = "fallback" },
-            python = { "isort", "black" },
-            javascript = { "prettierd", "prettier", stop_after_first = true },
+            javascript = {
+                "prettierd",
+                "prettier",
+                stop_after_first = true,
+            },
+            lua = {
+                "stylua",
+            },
+            proto = {
+                "buf",
+            },
+            python = {
+                "ruff_format",
+            },
+            rust = {
+                "rustfmt",
+            },
+            sh = {
+                "shfmt",
+            },
+            toml = {
+                "taplo",
+            },
         },
+
         -- Set default options
         default_format_opts = {
             lsp_format = "fallback",
         },
+
         -- Set up format-on-save
-        format_on_save = { timeout_ms = 500 },
+        format_on_save = { timeout_ms = 100 },
+
         -- Customize formatters
         formatters = {
             shfmt = {

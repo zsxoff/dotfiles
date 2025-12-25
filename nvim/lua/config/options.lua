@@ -19,6 +19,11 @@ opt.undolevels = 10000
 opt.updatetime = 50 -- Save swap file and trigger CursorHold
 opt.wrap = false -- Disable line wrap
 
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+vim.o.background = "dark"
+vim.o.cursorline = false
+
 if vim.fn.has("nvim-0.10") == 1 then
     opt.smoothscroll = true
     opt.foldexpr = "v:lua.require'lazyvim.util'.ui.foldexpr()"
