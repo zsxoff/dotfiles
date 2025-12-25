@@ -1,42 +1,48 @@
 #!/bin/sh
 
-# ZSH
-ln -s ${PWD}/.zshrc ${HOME}/.zshrc
+OS_TYPE=$(uname -s)
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
-mkdir -p ${HOME}/.config
+# ZSH
+ln -sf "${SCRIPT_DIR}/.zshrc" "${HOME}/.zshrc"
+
+# Config
+mkdir -p "${HOME}"/.config
+
+for cfg in alacritty kitty nvim zed; do
+    ln -sf "${SCRIPT_DIR}/$cfg" "${HOME}/.config/$cfg"
+done
 
 # Linux
-if [[ $OSTYPE == 'linux'* ]]; then
-    # Fonts
-    ln -s ${PWD}/.fonts.conf ${HOME}/.fonts.conf
+case "$OS_TYPE" in
+    Linux)
+        # Fonts
+        ln -s "${SCRIPT_DIR}"/.fonts.conf "${HOME}"/.fonts.conf
 
-    # Xresources
-    ln -s ${PWD}/.Xresources ${HOME}/.Xresources
+        # Xresources
+        ln -s "${SCRIPT_DIR}"/.Xresources "${HOME}"/.Xresources
 
-    # xsettingsd
-    ln -s ${PWD}/.xsettingsd ${HOME}/.xsettingsd
+        # xsettingsd
+        ln -s "${SCRIPT_DIR}"/.xsettingsd "${HOME}"/.xsettingsd
 
-    # Labwc
-    ln -s ${PWD}/labwc ${HOME}/.config/labwc
-fi
+        # Labwc
+        ln -s "${SCRIPT_DIR}"/labwc "${HOME}"/.config/labwc
+        ;;
+esac
 
-# Alacritty
-ln -s ${PWD}/alacritty ${HOME}/.config/alacritty
+# # Visual Studio Code
+case "$OS_TYPE" in
+    Darwin)
+        VSCODE_DIR="${HOME}/Library/Application Support/Code/User"
+        ;;
+    Linux)
+        VSCODE_DIR="${HOME}/.config/Code/User"
+        ;;
+    *)
+        VSCODE_DIR=""
+        ;;
+esac
 
-# Kitty
-ln -s ${PWD}/kitty ${HOME}/.config/kitty
-
-# Neovim
-ln -s ${PWD}/nvim ${HOME}/.config/nvim
-
-# Zed
-ln -s ${PWD}/zed ${HOME}/.config/zed
-
-# Visual Studio Code
-if [[ $OSTYPE == 'darwin'* ]]; then
-  mkdir -p ${HOME}/Library/Application Support/Code/User/
-  ln -s ${PWD}/Code/User/settings.json ${HOME}/Library/Application Support/Code/User/settings.json
-elif [[ $OSTYPE == 'linux'* ]]; then
-  mkdir -p ${HOME}/.config/Code/User/
-  ln -s ${PWD}/Code/User/settings.json ${HOME}/.config/Code/User/settings.json
+if [ -n "$VSCODE_DIR" ]; then
+    mkdir -p "$VSCODE_DIR" && ln -s "${SCRIPT_DIR}/Code/User/settings.json" "$VSCODE_DIR/settings.json"
 fi
