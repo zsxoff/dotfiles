@@ -19,7 +19,13 @@ repos:
       - id: trailing-whitespace
 
       - id: check-json
-        exclude: Code/User/settings.json
+        exclude: |
+          (?x)(
+            ^Code/User/settings\.json|
+            ^zed/settings\.json|
+            ^zed/tasks\.json|
+            ^zed/keymap\.json
+          )
 
   - repo: https://github.com/koalaman/shellcheck-precommit
     rev: v0.11.0
