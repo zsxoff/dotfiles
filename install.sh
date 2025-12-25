@@ -15,32 +15,32 @@ done
 
 # Linux
 case "$OS_TYPE" in
-    Linux)
-        # Fonts
-        ln -s "${SCRIPT_DIR}"/.fonts.conf "${HOME}"/.fonts.conf
+Linux)
+    # Fonts
+    ln -s "${SCRIPT_DIR}"/.fonts.conf "${HOME}"/.fonts.conf
 
-        # Xresources
-        ln -s "${SCRIPT_DIR}"/.Xresources "${HOME}"/.Xresources
+    # Xresources
+    ln -s "${SCRIPT_DIR}"/.Xresources "${HOME}"/.Xresources
 
-        # xsettingsd
-        ln -s "${SCRIPT_DIR}"/.xsettingsd "${HOME}"/.xsettingsd
+    # xsettingsd
+    ln -s "${SCRIPT_DIR}"/.xsettingsd "${HOME}"/.xsettingsd
 
-        # Labwc
-        ln -s "${SCRIPT_DIR}"/labwc "${HOME}"/.config/labwc
-        ;;
+    # Labwc
+    ln -s "${SCRIPT_DIR}"/labwc "${HOME}"/.config/labwc
+    ;;
 esac
 
 # # Visual Studio Code
 case "$OS_TYPE" in
-    Darwin)
-        VSCODE_DIR="${HOME}/Library/Application Support/Code/User"
-        ;;
-    Linux)
-        VSCODE_DIR="${HOME}/.config/Code/User"
-        ;;
-    *)
-        VSCODE_DIR=""
-        ;;
+Darwin)
+    VSCODE_DIR="${HOME}/Library/Application Support/Code/User"
+    ;;
+Linux)
+    VSCODE_DIR="${HOME}/.config/Code/User"
+    ;;
+*)
+    VSCODE_DIR=""
+    ;;
 esac
 
 if [ -n "$VSCODE_DIR" ]; then
