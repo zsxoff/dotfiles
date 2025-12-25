@@ -24,8 +24,7 @@ ln -s ${PWD}/alacritty/alacritty.toml ${HOME}/.config/alacritty/alacritty.toml
 
 # Kitty
 mkdir -p ${HOME}/.config/kitty/
-ln -s ${PWD}/kitty/kitty.conf ${HOME}/.config/kitty/kitty.conf
-ln -s ${PWD}/kitty/current-theme.conf ${HOME}/.config/kitty/current-theme.conf
+ln -s ${PWD}/kitty ${HOME}/.config/kitty
 
 # Neovim
 ln -s ${PWD}/nvim ${HOME}/.config/nvim
