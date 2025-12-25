@@ -3,6 +3,8 @@
 # ZSH
 ln -s ${PWD}/.zshrc ${HOME}/.zshrc
 
+mkdir -p ${HOME}/.config
+
 # Linux
 if [[ $OSTYPE == 'linux'* ]]; then
     # Fonts
@@ -19,11 +21,9 @@ if [[ $OSTYPE == 'linux'* ]]; then
 fi
 
 # Alacritty
-mkdir -p ${HOME}/.config/alacritty/
-ln -s ${PWD}/alacritty/alacritty.toml ${HOME}/.config/alacritty/alacritty.toml
+ln -s ${PWD}/alacritty ${HOME}/.config/alacritty
 
 # Kitty
-mkdir -p ${HOME}/.config/kitty/
 ln -s ${PWD}/kitty ${HOME}/.config/kitty
 
 # Neovim
