@@ -4,13 +4,13 @@ OS_TYPE=$(uname -s)
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 # ZSH
-ln -sf "${SCRIPT_DIR}/.zshrc" "${HOME}/.zshrc"
+ln -s "${SCRIPT_DIR}/.zshrc" "${HOME}/.zshrc"
 
 # Config
 mkdir -p "${HOME}"/.config
 
 for cfg in alacritty kitty nvim zed; do
-    ln -sf "${SCRIPT_DIR}/$cfg" "${HOME}/.config/$cfg"
+    ln -s "${SCRIPT_DIR}/$cfg" "${HOME}/.config/$cfg"
 done
 
 # Linux
