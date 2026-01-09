@@ -80,7 +80,6 @@ alias kc="kubeconform"
 alias vim="nvim"
 alias sa="source ./.venv/bin/activate"
 alias sd="deactivate"
-alias zed="zeditor"
 alias gu="gitui"
 
 if [[ "$(uname -s)" == "Linux" ]]; then
