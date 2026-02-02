@@ -1,5 +1,5 @@
 ---
-minimum_prek_version: "0.2.24"
+minimum_prek_version: "0.3.1"
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
@@ -38,7 +38,7 @@ repos:
       - id: shellcheck
 
   - repo: https://github.com/adrienverge/yamllint.git
-    rev: v1.37.1
+    rev: v1.38.0
     hooks:
       - id: yamllint
         args: [--strict, -c=.yamllint]
