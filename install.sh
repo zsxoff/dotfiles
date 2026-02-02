@@ -9,7 +9,7 @@ ln -s "${SCRIPT_DIR}/.zshrc" "${HOME}/.zshrc"
 # Config
 mkdir -p "${HOME}"/.config
 
-for cfg in alacritty kitty nvim zed; do
+for cfg in alacritty kitty nvim sway zed; do
     ln -s "${SCRIPT_DIR}/$cfg" "${HOME}/.config/$cfg"
 done
 
