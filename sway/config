@@ -27,9 +27,9 @@ set $right l
 #          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
 #          before-sleep 'swaylock -f -c 000000'
 #
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
+# This will lock your screen after 300 seconds of inactivity, then turn off your
+# displays after another 300 seconds, and turn your screens back on when resumed.
+# It will also lock your screen before your computer goes to sleep.
 
 ### Input configuration
 #
@@ -49,10 +49,9 @@ set $right l
 
 input * {
     repeat_delay 250
-    repeat_rate  45
-
-    xkb_layout  "us,ru"
-    xkb_options "grp:win_space_toggle"
+    repeat_rate  50
+    xkb_layout   "us,ru"
+    xkb_options  "grp:win_space_toggle"
 }
 
 ### Key bindings
@@ -91,8 +90,8 @@ input * {
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
-    # Change normal to inverse to use left mouse button for resizing and
-    # right mouse button for dragging.
+    # Change normal to inverse to use left mouse button for resizing and right mouse
+    # button for dragging.
     floating_modifier $mod normal
 
 # Moving around
@@ -109,15 +108,15 @@ input * {
     bindsym $mod+Shift+$right move right
 
     # Arrow keys
-    bindsym $mod+Left        focus left
-    bindsym $mod+Down        focus down
-    bindsym $mod+Up          focus up
-    bindsym $mod+Right       focus right
+    bindsym $mod+Left         focus left
+    bindsym $mod+Down         focus down
+    bindsym $mod+Up           focus up
+    bindsym $mod+Right        focus right
 
-    bindsym $mod+Shift+Left  move left
-    bindsym $mod+Shift+Down  move down
-    bindsym $mod+Shift+Up    move up
-    bindsym $mod+Shift+Right move right
+    bindsym $mod+Shift+Left   move left
+    bindsym $mod+Shift+Down   move down
+    bindsym $mod+Shift+Up     move up
+    bindsym $mod+Shift+Right  move right
 
 # Resizing containers
 
@@ -180,6 +179,7 @@ input * {
 
     # Toggle the current focus between tiling and floating mode
     bindsym $mod+Shift+space floating toggle
+    bindsym $mod+Shift+f     floating toggle
 
     # Swap focus between the tiling area and the floating area
     bindsym $mod+d focus mode_toggle
@@ -199,7 +199,7 @@ input * {
     # are multiple scratchpad windows, this command cycles through them.
     bindsym $mod+minus scratchpad show
 
-default_border pixel 0
+default_border pixel 1
 
 bar {
     position top
@@ -211,10 +211,10 @@ bar {
     font pango:Arimo 12
 
     colors {
-        statusline #E4E4E5
-        background #000000
+        statusline         #FFFFFF
+        background         #000000
         inactive_workspace #32323200 #32323200 #5c5c5c
-        focused_workspace #00000000 #121212FF #52BDFF
+        focused_workspace  #00000000 #00000000 #15C1FF
     }
 }
 
