@@ -35,15 +35,19 @@ else
 fi
 
 plugins=(
-    battery
-    direnv
+    # battery
+    # autoupdate     # https://github.com/tamcore/autoupdate-oh-my-zsh-plugins
+    # you-should-use # https://github.com/MichaelAquilina/zsh-you-should-use
+    # direnv
+
     git
     gitfast
-    autoupdate              # https://github.com/tamcore/autoupdate-oh-my-zsh-plugins
-    you-should-use          # https://github.com/MichaelAquilina/zsh-you-should-use
     zsh-autosuggestions     # https://github.com/zsh-users/zsh-autosuggestions
     zsh-syntax-highlighting # https://github.com/zsh-users/zsh-syntax-highlighting
 )
+
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="20"
+ZSH_AUTOSUGGEST_USE_ASYNC=1
 
 autoload -U compinit && compinit
 
@@ -66,6 +70,7 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 source <(fzf --zsh)
 source <(kubectl completion zsh)
+compdef kubecolor=kubectl
 
 # ----------------------------------------------------------------------------------------------------------------------
 # Aliases
@@ -91,6 +96,7 @@ fi
 
 export FZF_DEFAULT_COMMAND="fd --type file --follow --hidden --exclude .git --color=always"
 export FZF_DEFAULT_OPTS="--ansi"
+export KUBECOLOR_OBJ_FRESH="9h"
 
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
