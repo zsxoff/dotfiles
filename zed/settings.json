@@ -1,4 +1,7 @@
 {
+  // Local proxy
+  "proxy": "socks5://127.0.0.1:8888",
+
   // Disable auto update for OS package manager
   "auto_update": false,
 
@@ -39,6 +42,7 @@
     "dockerfile": true,
     "log": true,
     "make": true,
+    "monokai-nebula": true,
     "ruff": true,
     "sql": true,
     "toml": true,
@@ -91,7 +95,7 @@
   "minimap": {
     "show": "always"
   },
-  "theme": "Fleet Dark",
+  "theme": "Monokai Nebula",
   "ui_font_family": "Arimo",
   "ui_font_size": 13,
   "wrap_guides": [120],
@@ -142,10 +146,10 @@
           }
         },
         {
-          "code_actions": {
-            "source.organizeImports.ruff": true,
-            "source.fixAll.ruff": true
-          }
+          "code_action": "source.organizeImports.ruff"
+        },
+        {
+          "code_action": "source.fixAll.ruff"
         }
       ]
     }
