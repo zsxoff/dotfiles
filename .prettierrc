@@ -1,0 +1,11 @@
+{
+  "overrides": [
+    {
+      "files": [".prettierrc", "*.jsonc", "*.json"],
+      "options": {
+        "parser": "json",
+        "trailingComma": "none"
+      }
+    }
+  ]
+}

@@ -14,7 +14,7 @@ insert_final_newline = true
 [*.xml]
 indent_size = 2
 
-[{*.json,*.jsonc}]
+[{*.json,*.jsonc,.prettierrc}]
 indent_size = 2
 
 [{*.yml,*.yaml,.yamllint}]
