@@ -45,6 +45,7 @@
     "monokai-nebula": true,
     "ruff": true,
     "sql": true,
+    "tombi": true,
     "toml": true,
     "zed-kanagawa": true
   },
