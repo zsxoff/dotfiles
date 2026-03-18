@@ -5,31 +5,69 @@
   // Disable auto update for OS package manager
   "auto_update": false,
 
-  // Disable online projects
-  "projects_online_by_default": false,
-
   // Disable telemetry
   "telemetry": {
     "diagnostics": false,
     "metrics": false
   },
 
-  // Disable Copilot
-  "features": {
-    "copilot": false
+  // MCP
+  "context_servers": {
+    "duckduckgo": {
+      "enabled": true,
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "mcp/duckduckgo@sha256:68eb20db6109f5c312a695fc5ec3386ad15d93ffb765a0b4eb1baf4328dec14f"
+      ],
+      "env": {}
+    }
   },
 
   // AI assistant
   "agent": {
+    "default_profile": "ask",
+    "profiles": {
+      "ask": {
+        "name": "Ask",
+        "tools": {
+          "copy_path": true,
+          "create_directory": true,
+          "edit_file": true,
+          "contents": true,
+          "diagnostics": true,
+          "fetch": true,
+          "list_directory": true,
+          "now": true,
+          "find_path": true,
+          "read_file": true,
+          "open": true,
+          "grep": true,
+          "thinking": true,
+          "web_search": true
+        },
+        "enable_all_context_servers": true,
+        "context_servers": {
+          "duckduckgo": {
+            "tools": {
+              "search": true,
+              "fetch_content": true
+            }
+          }
+        }
+      }
+    },
     "default_model": {
       "provider": "ollama",
-      "model": "deepseek-r1:8b"
-    },
-    "inline_assistant_model": {
-      "provider": "ollama",
-      "model": "qwen2.5-coder:7b"
+      "model": "hf.co/unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF:UD-Q4_K_XL"
     },
     "commit_message_model": {
+      "provider": "ollama",
+      "model": "hf.co/unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF:UD-Q4_K_XL"
+    },
+    "inline_assistant_model": {
       "provider": "ollama",
       "model": "qwen2.5-coder:14b"
     }
@@ -40,10 +78,14 @@
   "auto_install_extensions": {
     "docker-compose": true,
     "dockerfile": true,
+    "editorconfig": true,
+    "git-firefly": true,
+    "jinja2": true,
     "log": true,
     "make": true,
+    "material-icon-theme": true,
     "monokai-nebula": true,
-    "ruff": true,
+    "proto": true,
     "sql": true,
     "tombi": true,
     "toml": true,
@@ -53,10 +95,10 @@
   // Appearance
   "allow_rewrap": "anywhere", // Ctrl+K+Q
   "buffer_font_family": "JetBrainsMono Nerd Font",
-  "buffer_font_size": 13.0,
-  "buffer_font_weight": 400,
+  "buffer_font_size": 12.0,
+  "buffer_font_weight": 500,
   "buffer_line_height": {
-    "custom": 1.6
+    "custom": 1.7
   },
   "current_line_highlight": "none",
   "ensure_final_newline_on_save": true,
@@ -74,6 +116,11 @@
     "indent_size": 16
   },
   "remove_trailing_whitespace_on_save": true,
+  "show_whitespaces": "trailing",
+  "whitespace_map": {
+    "space": "●",
+    "tab": "❥"
+  },
   "soft_wrap": "editor_width",
   "tab_bar": {
     "show": true,
@@ -99,7 +146,7 @@
   "theme": "Monokai Nebula",
   "ui_font_family": "Arimo",
   "ui_font_size": 13,
-  "wrap_guides": [120],
+  "wrap_guides": [88, 120],
 
   // Appearance for diagnostics
   "diagnostics": {
@@ -161,7 +208,7 @@
     "ruff": {
       "initialization_options": {
         "settings": {
-          "lineLength": 120,
+          "lineLength": 88,
           "lint": {
             "extendSelect": [
               "D401", // First line of docstring should be in imperative mood
