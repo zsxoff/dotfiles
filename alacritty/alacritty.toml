@@ -1,3 +1,4 @@
+[general]
 live_config_reload = true
 
 [env]
@@ -16,48 +17,60 @@ history = 10000
 blinking = "On"
 shape = "Beam"
 
-# Font
+[selection]
+save_to_clipboard = true
+
 [font]
 size = 12.0
+offset.x = -1
+offset.y = -2
 
 [font.bold]
-family = "JetBrainsMono Nerd Font Mono"
+family = "JetBrainsMono Nerd Font"
 style = "Bold"
 
 [font.bold_italic]
-family = "JetBrainsMono Nerd Font Mono"
+family = "JetBrainsMono Nerd Font"
 style = "Bold Italic"
 
 [font.italic]
-family = "JetBrainsMono Nerd Font Mono"
+family = "JetBrainsMono Nerd Font"
 style = "Italic"
 
 [font.normal]
-family = "JetBrainsMono Nerd Font Mono"
-style = "Regular"
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
 
-# Theme
-[colors.bright]
-black = "#686868"
-blue = "#3BE5FF"
-cyan = "#FFA826"
-green = "#89E215"
-magenta = "#A567F1"
-red = "#FA236E"
-white = "#FFF9D5"
-yellow = "#EECE3F"
-
-[colors.normal]
-black = "#212733"
-blue = "#3BE5FF"
-cyan = "#FFA826"
-green = "#89E215"
-magenta = "#A567F1"
-red = "#FA236E"
-white = "#E0DBB7"
-yellow = "#EECE3F"
+# Theme: xoff
+# Source: https://github.com/zsxoff/xoff-theme
 
 [colors.primary]
 background = "#000000"
-bright_foreground = "#f28779"
-foreground = "#cbccc6"
+foreground = "#FFFFFF"
+
+[colors.cursor]
+cursor = "#FFFFFF"
+
+[colors.selection]
+text       = "CellForeground"
+background = "#0CFA66"
+
+[colors.normal]
+black   = "#000000"
+red     = "#FA3B05"
+green   = "#0CFA66"
+yellow  = "#FFE605"
+blue    = "#15C1FF"
+magenta = "#FA0474"
+cyan    = "#82FAF4"
+white   = "#A6A6A6"
+
+[colors.bright]
+black   = "#555555"
+red     = "#FF6136"
+green   = "#4BCE4F"
+yellow  = "#FFF48C"
+blue    = "#88BBCE"
+magenta = "#FF54A1"
+cyan    = "#BEFFFC"
+white   = "#FFFFFF"
