@@ -2,7 +2,7 @@
 set $mod Mod1
 
 # Programs
-set $term foot
+set $term alacritty
 set $menu dmenu_run -b -fn 'Arimo-12' -p '> ' -nb '#000000' -nf '#FFFFFF'
 
 # Vim mode
@@ -215,6 +215,10 @@ bar {
         background         #000000
         inactive_workspace #32323200 #32323200 #5c5c5c
         focused_workspace  #00000000 #00000000 #15C1FF
+    }
+
+    tray {
+        icon_theme "Papirus-Dark"
     }
 }
 
