@@ -1,6 +1,21 @@
 {
   // Local proxy
-  "proxy": "socks5://127.0.0.1:8888",
+  // "proxy": "socks5://127.0.0.1:8888",
+
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "right"
+  },
+  "language_models": {
+    "ollama": {
+      "api_url": "http://localhost:11434"
+    }
+  },
 
   // Disable auto update for OS package manager
   "auto_update": false,
@@ -28,11 +43,13 @@
 
   // AI assistant
   "agent": {
-    "default_profile": "ask",
+    "default_profile": "write",
     "profiles": {
       "ask": {
         "name": "Ask",
         "tools": {
+          "search_web": true,
+          "save_file": true,
           "copy_path": true,
           "create_directory": true,
           "edit_file": true,
@@ -45,8 +62,7 @@
           "read_file": true,
           "open": true,
           "grep": true,
-          "thinking": true,
-          "web_search": true
+          "thinking": true
         },
         "enable_all_context_servers": true,
         "context_servers": {
@@ -60,16 +76,19 @@
       }
     },
     "default_model": {
+      "enable_thinking": true,
       "provider": "ollama",
-      "model": "hf.co/unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF:UD-Q4_K_XL"
+      "model": "gemma4:e2b"
     },
     "commit_message_model": {
+      "enable_thinking": true,
       "provider": "ollama",
-      "model": "hf.co/unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF:UD-Q4_K_XL"
+      "model": "gemma4:e2b"
     },
     "inline_assistant_model": {
+      "enable_thinking": true,
       "provider": "ollama",
-      "model": "qwen2.5-coder:14b"
+      "model": "gemma4:e2b"
     }
   },
   "show_edit_predictions": true,
@@ -87,7 +106,6 @@
     "monokai-nebula": true,
     "proto": true,
     "sql": true,
-    "tombi": true,
     "toml": true,
     "zed-kanagawa": true
   },
@@ -95,8 +113,8 @@
   // Appearance
   "allow_rewrap": "anywhere", // Ctrl+K+Q
   "buffer_font_family": "JetBrainsMono Nerd Font",
-  "buffer_font_size": 12.0,
-  "buffer_font_weight": 500,
+  "buffer_font_size": 15.0,
+  "buffer_font_weight": 600,
   "buffer_line_height": {
     "custom": 1.7
   },
@@ -113,6 +131,7 @@
   },
   "preferred_line_length": 120,
   "project_panel": {
+    "dock": "left",
     "indent_size": 16
   },
   "remove_trailing_whitespace_on_save": true,
@@ -138,7 +157,7 @@
   },
   "title_bar": {
     "show_branch_name": true,
-    "show_branch_icon": true
+    "show_branch_status_icon": true
   },
   "minimap": {
     "show": "always"
