@@ -1,4 +1,6 @@
 {
+  "http.proxy": "socks5://127.0.0.1:8888",
+
   // Disable update because it's rule over package manager
   "update.mode": "none",
 
@@ -22,7 +24,7 @@
   "continue.telemetryEnabled": false,
 
   // Workbench
-  "workbench.colorTheme": "Kanagawa Black",
+  "workbench.colorTheme": "Carbonfox",
   "workbench.editor.showTabIndex": true,
   "workbench.iconTheme": "symbols",
   "workbench.layoutControl.enabled": false,
@@ -49,17 +51,17 @@
   "editor.folding": false,
   "editor.fontFamily": "'JetBrainsMono Nerd Font Mono'",
   "editor.fontLigatures": true,
-  "editor.fontSize": 14,
-  "editor.fontWeight": "700",
+  "editor.fontSize": 17,
+  "editor.fontWeight": "600",
   "editor.formatOnPaste": false,
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
   "editor.inlineSuggest.enabled": true,
   "editor.inlineSuggest.minShowDelay": 0,
   "editor.inlineSuggest.syntaxHighlightingEnabled": true,
-  "editor.letterSpacing": 0.0,
+  "editor.letterSpacing": -0.8,
   "editor.lightbulb.enabled": "off",
-  "editor.lineHeight": 1.4,
+  "editor.lineHeight": 1.7,
   "editor.lineNumbers": "on",
   "editor.linkedEditing": true,
   "editor.minimap.enabled": true,
@@ -114,8 +116,8 @@
     "editor.formatOnType": true,
     "editor.codeActionsOnSave": {
       "source.fixAll.ruff": "explicit",
-      "source.organizeImports.ruff": "always"
-    }
+      "source.organizeImports.ruff": "always",
+    },
   },
 
   // Go (https://marketplace.visualstudio.com/items?itemName=golang.Go)
@@ -127,7 +129,7 @@
 
   // Code Runner (https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner)
   "code-runner.executorMap": {
-    "rust": "RUST_LOG=\"debug\" cargo run $fileName"
+    "rust": "RUST_LOG=\"debug\" cargo run $fileName",
   },
 
   // Hadolint (https://marketplace.visualstudio.com/items?itemName=exiasr.hadolint)
@@ -139,33 +141,33 @@
   // Linter (https://marketplace.visualstudio.com/items?itemName=fnando.linter)
   "linter.linters": {
     "yamllint": {
-      "languages": ["yaml", "dockercompose"]
-    }
+      "languages": ["yaml", "dockercompose"],
+    },
   },
 
   // Formatters
   "[dockercompose]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[dockerfile]": {
-    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    "editor.defaultFormatter": "docker.docker",
   },
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[markdown]": {
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
   },
   "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
-  }
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+  },
 }
