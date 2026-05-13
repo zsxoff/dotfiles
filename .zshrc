@@ -86,6 +86,7 @@ alias vim="nvim"
 alias sa="source ./.venv/bin/activate"
 alias sd="deactivate"
 alias gu="gitui"
+alias cyberchef="docker run -it -p 127.0.0.1:8100:80 ghcr.io/gchq/cyberchef:10.24.0"
 
 if [[ "$(uname -s)" == "Linux" ]]; then
     alias zed="env -u WAYLAND_DISPLAY zeditor"
