@@ -157,7 +157,9 @@ window#waybar,
     min-width: 30px;
     min-height: 30px;
     padding: 0;
+    border: none;
     border-radius: 50%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
 }
 
 #privacy-item.audio-out {
