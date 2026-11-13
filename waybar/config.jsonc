@@ -1,0 +1,105 @@
+// -*- mode: jsonc -*-
+{
+  "height": 42,
+  "modules-left": ["sway/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "privacy",
+    "tray",
+    "battery",
+    "network",
+    "pulseaudio",
+    "power-profiles-daemon"
+  ],
+  "tray": {
+    "spacing": 12,
+    "icon-size": 18
+  },
+  "clock": {
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "{:%Y-%m-%d}",
+    "format": "{:%H:%M}"
+  },
+  "sway/workspaces": {
+    "disable-scroll": true
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-charging": "{capacity}% {icon}",
+    "format-plugged": "{capacity}% {icon}",
+    "format-alt": "{time} {icon}",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "power-profiles-daemon": {
+    "format": "󰗑",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true
+  },
+  "network": {
+    "format-wifi": "",
+    "format-ethernet": "󰱓",
+    "tooltip-format": "{ifname}: {ipaddr}/{cidr}\nGateway: {gwaddr}",
+    "format-linked": "󰱓",
+    "format-disconnected": "󰅛",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+  },
+  "pulseaudio": {
+    "format": "{icon}",
+    "format-bluetooth": "{icon}",
+    "format-bluetooth-muted": "{icon}",
+    "format-muted": "{icon}",
+    "format-source": "{volume}%",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": [""],
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "on-click": "pavucontrol"
+  },
+  "privacy": {
+    "icon-spacing": 4,
+    "icon-size": 18,
+    "transition-duration": 250,
+    "modules": [
+      {
+        "type": "screenshare",
+        "tooltip": true,
+        "tooltip-icon-size": 24
+      },
+      {
+        "type": "audio-out",
+        "tooltip": true,
+        "tooltip-icon-size": 24
+      },
+      {
+        "type": "audio-in",
+        "tooltip": true,
+        "tooltip-icon-size": 24
+      },
+      {
+        "type": "location",
+        "icon-name": "location-services-active-symbolic"
+      }
+    ],
+    "ignore-monitor": true,
+    "ignore": [
+      {
+        "type": "audio-in",
+        "name": "cava"
+      },
+      {
+        "type": "screenshare",
+        "name": "obs"
+      }
+    ]
+  }
+}
