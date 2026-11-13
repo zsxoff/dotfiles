@@ -62,8 +62,17 @@ export PATH="${HOME}/.local/bin:$PATH"
 # Go
 export PATH="${HOME}/go/bin:$PATH"
 
-# Kubernetes Krew
+# Krew
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+# pnpm
+export PATH="${HOME}/.local/share/pnpm/bin:$PATH"
+
+# CUDA
+if [[ "$(uname -s)" == "Linux" ]]; then
+    export CUDA_HOME=/opt/cuda
+    export PATH="${CUDA_HOME}/bin:$PATH"
+fi
 
 # ----------------------------------------------------------------------------------------------------------------------
 # Sources
@@ -78,6 +87,7 @@ compdef kubecolor=kubectl
 alias la="eza -la --icons -s type"
 alias ll="eza -ll --icons -s type"
 alias ls="eza --icons -s type"
+alias lll="eza -ll --icons -s type --loc --header"
 alias tree="eza --tree --icons -s type"
 alias kubectl="kubecolor"
 alias k="kubectl"
@@ -87,6 +97,7 @@ alias sa="source ./.venv/bin/activate"
 alias sd="deactivate"
 alias gu="gitui"
 alias cyberchef="docker run -it -p 127.0.0.1:8100:80 ghcr.io/gchq/cyberchef:10.24.0"
+alias hx="helix"
 
 if [[ "$(uname -s)" == "Linux" ]]; then
     alias zed="env -u WAYLAND_DISPLAY zeditor"
